@@ -1,0 +1,186 @@
+
+/* Main section */
+.beveragesection {
+  width: 100%;
+  padding: 30px 5%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #ffffff;
+  background-image: url("../images/beverage.png");
+  background-repeat: no-repeat;
+  
+}
+
+/* Main beverage image */
+
+/* Heading section */
+.beveragecontent {
+  width: 100%;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.beveragecontent > p {
+  color: #e68f91;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.beveragecontent h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222222;
+  margin: 10px 0;
+}
+
+.beveragecontent > i {
+  color: #e68f91;
+  font-size: 28px;
+  margin: 15px 0 35px;
+}
+
+/* Product cards */
+.beveragecontent list {
+  display: block;
+  width: 100%;
+}
+
+.beveragecontent ol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  padding: 0;
+  margin: 20px 0 60px;
+  list-style: none;
+}
+
+.beveragecontent li {
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Product images */
+.beveragecontent li img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.beveragecontent li img:hover {
+  transform: scale(1.04);
+}
+
+/* Product title */
+.beveragecontent li h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222222;
+  margin: 25px 0 10px;
+  transition: color 0.3s ease;
+}
+
+.beveragecontent li h4:hover {
+  color: #e68f91;
+}
+
+/* Product count */
+.beveragecontent li p {
+  font-size: 17px;
+  color: #777777;
+  margin: 0;
+}
+
+/* View all products button */
+.buynow1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  width: 310px;
+  height: 78px;
+  margin: 30px auto;
+  padding: 8px;
+  border: 1px solid #e68f91;
+  border-radius: 50px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-icon1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #e68f91;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0;
+}
+
+.buttontext1 {
+  font-size: 18px;
+  color: #222222;
+  margin: 0;
+}
+
+.buynow1:hover {
+  background-color: #e68f91;
+}
+
+.buynow1:hover .buttontext1 {
+  color: white;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .beverages-content ol {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .beverages-content li img {
+    height: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .beverages-section {
+    padding: 20px 15px;
+  }
+
+  .beverages-section > img {
+    height: 220px;
+  }
+
+  .beverages-content h3 {
+    font-size: 28px;
+  }
+
+  .beverages-content ol {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .beverages-content li img {
+    height: 400px;
+  }
+
+  .buynow1 {
+    width: 260px;
+    height: 65px;
+  }
+
+  .button-icon1 {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}

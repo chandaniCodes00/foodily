@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.recipe {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 5%;
+  text-align: center;
+  overflow: hidden;
+  background: white;
+}
+
+/* Header  section */
+
+header p {
+  color: #c5b98e;
+  font-family: cursive;
+  font-size: 25px;
+}
+
+header h1 {
+  color: #292831;
+  font-size: 50px;
+  margin: 15px 0;
+}
+
+header i {
+  color: #c5b98e;
+  font-size: 22px;
+}
+
+/* Main section */
+
+.main {
+  max-width: 1200px;
+  height: 650px;
+  margin: 30px auto;
+  position: relative;
+
+  background: radial-gradient(
+    circle,
+    transparent 35%,
+    #f5eee7 35.2%,
+    transparent 35.5%,
+    transparent 45%,
+    #f5eee7 45.2%,
+    transparent 45.5%
+  );
+}
+
+/* Center bottle  section of water bottle*/
+
+.main > img {
+  height: 500px;
+  width: auto;
+  position: absolute;
+  /* margin-right: 500px; */
+  padding: 250px 400px 50px 0px;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Ingredients  it contain the ingredients related css*/
+
+.item,
+.lemon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+  text-align: left;
+}
+
+.item img,
+.lemon img {
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  background: #ff7900;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+.item img:hover,
+.lemon img:hover {
+  transform: scale(1.1);
+}
+
+.item h3,
+.lemon h3 {
+  color: #171724;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.item p,
+.lemon p {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Left side  it contain the soothie related left side element css */
+
+.cucumber {
+  top: 150px;
+  left: 0;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.apple {
+  top: 380px;
+  left: 0;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Right side  it contain the soothie related right side elment css*/
+
+.lemon {
+  top: 150px;
+  right: 0;
+}
+
+.water {
+  top: 380px;
+  right: 0;
+}
+
+/* Animation make element transition */
+
+@keyframes float {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -15px;
+  }
+}
+
+/* Tablet  it defime css for differrent screen*/
+
+@media (max-width: 1000px) {
+  header h1 {
+    font-size: 38px;
+  }
+
+  .main {
+    height: 600px;
+  }
+
+  .item,
+  .lemon {
+    width: 320px;
+    gap: 12px;
+  }
+
+  .item img,
+  .lemon img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .item h3,
+  .lemon h3 {
+    font-size: 17px;
+  }
+
+  .item p,
+  .lemon p {
+    font-size: 14px;
+  }
+
+  .main > img {
+    height: 420px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .recipe {
+    padding: 25px 15px;
+  }
+
+  header p {
+    font-size: 19px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: none;
+  }
+
+  .main > img {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    height: 320px;
+    max-width: 100%;
+    align-self: center;
+  }
+
+  .item,
+  .lemon {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .item img,
+  .lemon img {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    padding: 12px;
+  }
+
+  .item h3,
+  .lemon h3 {
+    font-size: 17px;
+  }
+
+  .item p,
+  .lemon p {
+    font-size: 13px;
+  }
+}

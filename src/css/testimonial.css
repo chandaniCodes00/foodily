@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.testimonial {
+  width: 100%;
+  min-height: 760px;
+  padding: 90px 20px;
+  text-align: center;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Heading */
+
+.heading p {
+  color: #c5b98e;
+  font-family: cursive;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.heading h1 {
+  color: #292831;
+  font-size: 55px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.heading i {
+  color: #c5b98e;
+  font-size: 24px;
+}
+
+/* Testimonial content */
+
+.content {
+  max-width: 900px;
+  margin: 60px auto 0;
+  animation: fadeUp 1s ease;
+}
+
+/* Customer image */
+
+.customerimg {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+
+  margin-left: 200px;
+  border: 10px solid white;
+  object-fit: cover;
+  box-shadow: 0 5px 20px #00000015;
+  transition: 0.3s;
+  background-image: url("../images/pattern-4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.customerimg:hover {
+  transform: scale(1.08);
+}
+
+/* Review text */
+
+.review {
+  color: #666;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.9;
+  margin: 25px 0;
+}
+
+/* Author name */
+
+.content h3 {
+  color: #777;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.content h3 span {
+  color: #c5b98e;
+}
+
+/* Animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .heading h1 {
+    font-size: 42px;
+  }
+
+  .content {
+    max-width: 700px;
+  }
+
+  .review {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .testimonial {
+    min-height: 600px;
+    padding: 60px 20px;
+  }
+
+  .heading p {
+    font-size: 20px;
+  }
+
+  .heading h1 {
+    font-size: 32px;
+  }
+
+  .customerimg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .content {
+    margin-top: 40px;
+  }
+
+  .review {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .content h3 {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,271 @@
+
+/* Main Hero Section */
+.herosection {
+    width: 100%;
+    min-height: 800px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #fff;
+    padding: 50px 5%;
+
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+/* Left Juice Image */
+.herosection > img {
+    width: 52%;
+    height: auto;
+    max-width: 850px;
+    object-fit: contain;
+
+    animation: slideLeft 1.2s ease;
+}
+
+/* Right Content */
+.herosection > div {
+    width: 45%;
+    padding: 20px;
+
+    animation: slideRight 1.2s ease;
+}
+
+/* Title */
+.title {
+    font-family: cursive;
+    font-size: 25px;
+    color: #c3b58b;
+    margin-bottom: 15px;
+}
+
+/* Main Heading */
+.herosection h3 {
+    font-size: 55px;
+    font-weight: 700;
+    color: #292830;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+.herosection h3 span {
+    color: #df9293;
+}
+
+/* Seedling Icon */
+.herosection > div > i {
+    display: block;
+    color: #c3b58b;
+    margin-left: 50px;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* Description */
+.description1 {
+    font-size: 18px;
+    width: 600px;
+    line-height:2;
+    color: #555;
+    margin-bottom: 30px;
+
+}
+
+/* Buy Now Button */
+.buynow1 {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 25px;
+margin-left:30px;
+    padding: 7px 35px 7px 7px;
+
+    border: 1px solid #df9293;
+    border-radius: 50px;
+
+    background-color:transparent;
+
+    color: black;
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+}
+
+/* Button Icon */
+.button-icon1 {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+    background-color:#df9293;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    transition: all 0.4s ease;
+    margin: 0;
+}
+
+/* Button Text */
+.buttontext1 {
+    font-size: 17px;
+    margin: 0;
+    color: rgb(61, 58, 58);
+    text-align: center;
+    /* padding-bottom: 28px;
+    padding-left: 15px; */
+}
+
+/* Button Hover */
+.buynow1:hover {
+    background-color: #df9293;
+    color: white;
+}
+
+.buynow1:hover .button-icon1 {
+    background-color: white;
+    color: #df9293;
+    transform: rotate(360deg);
+}
+
+.back-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: white;
+    color: #df9293;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+    z-index: 999;
+
+    transition: all 0.3s ease;
+}
+
+.back-top:hover {
+    background-color: #df9293;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Image Animation */
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Content Animation */
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+
+    .herosection {
+        min-height: 650px;
+        padding: 40px 4%;
+    }
+
+    .herosection > img {
+        width: 50%;
+    }
+
+    .herosection > div {
+        width: 50%;
+    }
+
+    .herosection h3 {
+        font-size: 38px;
+        white-space: normal;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    .description1 {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    .herosection {
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 20px 80px;
+        gap: 25px;
+    }
+
+    .herosection > img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .herosection > div {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .herosection h3 {
+        font-size: 34px;
+        white-space: normal;
+    }
+
+    .description1 {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .herosection > div > i {
+        margin: 0 auto 25px;
+    }
+
+    .buynow {
+        margin: auto;
+    }
+
+    .back-top {
+        width: 40px;
+        height: 40px;
+        right: 12px;
+        bottom: 10px;
+    }
+}
