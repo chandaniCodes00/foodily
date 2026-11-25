@@ -3,6 +3,41 @@ import Images from "../images/images";
 import "../css/soothie.css";
 
 function Soothie() {
+  const smoothiedata = [
+    {
+      id: 1,
+      image: Images.recipe1,
+      alt: "cucumber",
+      className: "cucumber",
+      title: "Cucumber",
+      description: "Fresh cucumber for a healthy smoothie",
+    },
+    {
+      id: 2,
+      image: Images.icon2,
+      alt: "lemon",
+
+      className: "lemon",
+      title: "Lemon",
+      description: "Fresh lemon for refreshing tatse",
+    },
+    {
+      id: 3,
+      image: Images.recipe2,
+      alt: "apple",
+      className: "apple",
+      title: "Apple",
+      description: "Fresh apple for natural sweetness",
+    },
+    {
+      id: 4,
+      image: Images.recipe3,
+      alt: "freshwater",
+      className: "freahwater",
+      title: "Fresh Water",
+      description: "Pure water for a healthy drink",
+    },
+  ];
   return (
     <div className="recipe">
       <header>
@@ -13,30 +48,15 @@ function Soothie() {
 
       <div className="main">
         <img src={Images.recipe} alt="recipe image" />
-
-        <div className="item cucumber">
-          <img src={Images.recipe1} alt="cucumber" />
-          <div>
-            <h3>Cucumber</h3>
-            <p>Fresh cucumber for a healthy smoothie.</p>
+        {smoothiedata.map((item) => (
+          <div className={`item ${item.className || item.alt}`} key={item.id}>
+            <img src={item.image} alt={item.alt} />
+            <div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
           </div>
-        </div>
-
-        <div className="lemon">
-          <img src={Images.icon2} alt="" />
-          <div>
-            <h3>Lemon</h3>
-            <p>Fresh lemon for a refreshing taste.</p>
-          </div>
-        </div>
-
-        <div className="item apple" alt="">
-          <img src={Images.recipe2} alt="" />
-          <div>
-            <h3>Apple</h3>
-            <p>Fresh apple for natural sweetness</p>
-          </div>
-        </div>
+        ))}
 
         <div className="item water">
           <img src={Images.recipe3} alt="" />

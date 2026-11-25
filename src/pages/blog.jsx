@@ -3,6 +3,36 @@ import Images from "../images/images";
 import "../css/blog.css";
 
 function Blog() {
+  const blogdata = [
+    {
+      id: 1,
+      image: Images.beverage5,
+      alt: "Fruit Smoothie",
+      category: "SMOOTHIE",
+      title: "'Brand bean and goats', cheese bruschetta",
+      date: "May 21, 2021",
+      comments: "2 Comments",
+    },
+    {
+      id: 2,
+      image: Images.beverage7,
+      alt: "Fresh Juice",
+      category: "SMOOTHIE",
+      title: "'Brand bean and goats', cheese bruschetta",
+      date: "May 21, 2021",
+      comments: "2 Comments",
+    },
+    {
+      id: 3,
+      image: Images.contentimage3,
+      alt: "Banana Smoothie",
+      category: "SMOOTHIE",
+      title: "'Brand bean and goats', cheese bruschetta",
+      date: "May 21, 2021",
+      comments: "2 Comments",
+    },
+  ];
+
   return (
     <div className="blog">
       {/* Heading */}
@@ -21,38 +51,21 @@ function Blog() {
 
       {/* Blog Cards */}
       <div className="blog-container">
-        <div className="blog-card">
-          <img src={Images.beverage5} alt="Fruit smoothie" />
-          <div className="blog-info">
-            <span>SMOOTHIE</span>
-            <h3>Broad bean and goats’ cheese bruschetta</h3>
-            <p>
-              May 21, 2021 <b>•</b> 2 Comments <b>•</b> Share
-            </p>
+        {blogdata.map((blog) => (
+          <div className="blog-card" key={blog.id}>
+            <img src={blog.image} alt={blog.alt} />
+            <div className="blog-info">
+              <span>{blog.category}</span>
+              <h3>{blog.title}</h3>
+              <p>
+                {blog.date}
+                <b>.</b>
+                {blog.comments}
+                <b>.</b>Share
+              </p>
+            </div>
           </div>
-        </div>
-
-        <div className="blog-card">
-          <img src={Images.beverage7} alt="Fresh juice" />
-          <div className="blog-info">
-            <span>SMOOTHIE</span>
-            <h3>Broad bean and goats’ cheese bruschetta</h3>
-            <p>
-              May 21, 2021 <b>•</b> 2 Comments <b>•</b> Share
-            </p>
-          </div>
-        </div>
-
-        <div className="blog-card">
-          <img src={Images.contentimage3} alt="Banana smoothie" />
-          <div className="blog-info">
-            <span>SMOOTHIE</span>
-            <h3>Broad bean and goats’ cheese bruschetta</h3>
-            <p>
-              May 21, 2021 <b>•</b> 2 Comments <b>•</b> Share
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Bottom Gallery */}
