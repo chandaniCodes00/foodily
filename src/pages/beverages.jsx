@@ -3,6 +3,72 @@ import Images from "../images/images";
 import "../css/beverages.css";
 
 function Beverages() {
+  const beverageData = [
+    {
+      id: 1,
+      image: Images.beverage1,
+      alt: "MilkShake",
+      title: "MilkShake",
+      product: "3 products",
+    },
+
+    {
+      id: 2,
+      image: Images.beverage2,
+      alt: "Frappe",
+      title: "Frappe",
+      product: "3 products",
+    },
+
+    {
+      id: 3,
+      image: Images.beverage3,
+      alt: "Booba Drinks",
+      title: "Booba Drinks",
+      product: "3 products",
+    },
+
+    {
+      id: 4,
+      image: Images.beverage4,
+      alt: "Mojito",
+      title: "Mojito",
+      product: "3 products",
+    },
+
+    {
+      id: 5,
+      image: Images.beverage5,
+      alt: "Slushy",
+      title: "Slushy",
+      product: "3 products",
+    },
+
+    {
+      id: 6,
+      image: Images.beverage6,
+      alt: "Hot Chocolate",
+      title: "Hot Chocolate",
+      product: "3 products",
+    },
+
+    {
+      id: 7,
+      image: Images.beverage7,
+      alt: "Smoothie",
+      title: "Smoothie",
+      product: "3 products",
+    },
+
+    {
+      id: 8,
+      image: Images.beverage8,
+      alt: "Coffee",
+      title: "Coffee",
+      product: "3 products",
+    },
+  ];
+
   return (
     <div className="beveragesection">
       <div className="beveragecontent">
@@ -12,46 +78,13 @@ function Beverages() {
 
         <list>
           <ol>
-            <li>
-              <img src={Images.beverage1} alt="beverages" />
-              <h4>MilkShake</h4>
-              <p>3 products</p>
-            </li>
-            <li>
-              <img src={Images.beverage2} alt="beverages" />
-              <h4>Frappe</h4>
-              <p>3 products</p>
-            </li>
-            <li>
-              <img src={Images.beverage3} alt="beverages" />
-              <h4>Booba Drinks</h4>
-              <p>3 products</p>
-            </li>
-            <li>
-              <img src={Images.beverage4} alt="beverages" />
-              <h4>Mojito</h4>
-              <p>3 products</p>
-            </li>
-            <li>
-              <img src={Images.beverage5} alt="beverages" />
-              <h4>Slushy</h4>
-              <p>3 products</p>
-            </li>
-            <li>
-              <img src={Images.beverage6} alt="beverages" />
-              <h4>Hot Chocolate</h4>
-              <p>3 products</p>
-            </li>
-            <li>
-              <img src={Images.beverage7} alt="beverages" />
-              <h4>smoothie</h4>
-              <p>3 products</p>
-            </li>
-            <li>
-              <img src={Images.beverage8} alt="beverages" />
-              <h4>Coffee</h4>
-              <p>3 products</p>
-            </li>
+            {beverageData.map((data) => (
+              <li key={data.id}>
+                <img src={data.image} alt={data.alt} />
+                <h4>{data.title}</h4>
+                <p>{data.product}</p>
+              </li>
+            ))}
           </ol>
         </list>
       </div>
