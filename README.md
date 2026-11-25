@@ -63,13 +63,13 @@ frontend/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/developer-javaAndweb/Foodily.git
+git clone https://github.com/chandaniCodes00/foodily
 ```
 
 ### 2. Navigate to the frontend directory
 
 ```bash
-cd Foodily/frontend
+cd project/frontend
 ```
 
 ### 3. Install dependencies
@@ -94,9 +94,9 @@ npm run build
 
 ## 👨‍💻 Author
 
-**Abhijeet Kumar**
+**Chandani Kumari**
 
-GitHub: https://github.com/developer-javaAndweb
+GitHub: https://github.com/chandanicodes00
 
 ---
 
